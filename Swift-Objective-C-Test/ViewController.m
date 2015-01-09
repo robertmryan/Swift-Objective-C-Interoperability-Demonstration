@@ -7,6 +7,7 @@
 //
 
 #import "ViewController.h"
+#import "Swift_Objective_C_Test-Swift.h" // note dashes replaced with underscores
 
 @interface ViewController ()
 
@@ -14,14 +15,16 @@
 
 @implementation ViewController
 
-- (void)viewDidLoad {
-    [super viewDidLoad];
-    // Do any additional setup after loading the view, typically from a nib.
-}
-
-- (void)didReceiveMemoryWarning {
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
+- (IBAction)handleTappedButton:(id)sender {
+    NSLog(@"%s", __FUNCTION__);
+    
+    // create swift object
+    
+    SwiftObject *obj = [[SwiftObject alloc] init];
+    
+    // call method on swift object
+    
+    [obj swiftObjectMethod];
 }
 
 @end

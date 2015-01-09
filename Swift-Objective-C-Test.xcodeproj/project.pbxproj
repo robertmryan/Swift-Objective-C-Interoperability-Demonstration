@@ -14,6 +14,8 @@
 		8391DDE11A607D370063F14B /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8391DDE01A607D370063F14B /* Images.xcassets */; };
 		8391DDE41A607D370063F14B /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8391DDE21A607D370063F14B /* LaunchScreen.xib */; };
 		8391DDF01A607D370063F14B /* Swift_Objective_C_TestTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 8391DDEF1A607D370063F14B /* Swift_Objective_C_TestTests.m */; };
+		8391DDFB1A607D6A0063F14B /* SwiftObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8391DDFA1A607D6A0063F14B /* SwiftObject.swift */; };
+		8391DDFE1A607D970063F14B /* ObjectiveCObject.m in Sources */ = {isa = PBXBuildFile; fileRef = 8391DDFD1A607D970063F14B /* ObjectiveCObject.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -40,6 +42,10 @@
 		8391DDE91A607D370063F14B /* Swift-Objective-C-TestTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Swift-Objective-C-TestTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		8391DDEE1A607D370063F14B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		8391DDEF1A607D370063F14B /* Swift_Objective_C_TestTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Swift_Objective_C_TestTests.m; sourceTree = "<group>"; };
+		8391DDF91A607D6A0063F14B /* Swift-Objective-C-Test-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Swift-Objective-C-Test-Bridging-Header.h"; sourceTree = "<group>"; };
+		8391DDFA1A607D6A0063F14B /* SwiftObject.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SwiftObject.swift; sourceTree = "<group>"; };
+		8391DDFC1A607D970063F14B /* ObjectiveCObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ObjectiveCObject.h; sourceTree = "<group>"; };
+		8391DDFD1A607D970063F14B /* ObjectiveCObject.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ObjectiveCObject.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -85,10 +91,14 @@
 				8391DDD81A607D370063F14B /* AppDelegate.m */,
 				8391DDDA1A607D370063F14B /* ViewController.h */,
 				8391DDDB1A607D370063F14B /* ViewController.m */,
+				8391DDFC1A607D970063F14B /* ObjectiveCObject.h */,
+				8391DDFD1A607D970063F14B /* ObjectiveCObject.m */,
+				8391DDFA1A607D6A0063F14B /* SwiftObject.swift */,
 				8391DDDD1A607D370063F14B /* Main.storyboard */,
 				8391DDE01A607D370063F14B /* Images.xcassets */,
 				8391DDE21A607D370063F14B /* LaunchScreen.xib */,
 				8391DDD31A607D370063F14B /* Supporting Files */,
+				8391DDF91A607D6A0063F14B /* Swift-Objective-C-Test-Bridging-Header.h */,
 			);
 			path = "Swift-Objective-C-Test";
 			sourceTree = "<group>";
@@ -219,6 +229,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8391DDFB1A607D6A0063F14B /* SwiftObject.swift in Sources */,
+				8391DDFE1A607D970063F14B /* ObjectiveCObject.m in Sources */,
 				8391DDDC1A607D370063F14B /* ViewController.m in Sources */,
 				8391DDD91A607D370063F14B /* AppDelegate.m in Sources */,
 				8391DDD61A607D370063F14B /* main.m in Sources */,
@@ -343,9 +355,12 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				INFOPLIST_FILE = "Swift-Objective-C-Test/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "Swift-Objective-C-Test/Swift-Objective-C-Test-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 			};
 			name = Debug;
 		};
@@ -353,9 +368,11 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				INFOPLIST_FILE = "Swift-Objective-C-Test/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "Swift-Objective-C-Test/Swift-Objective-C-Test-Bridging-Header.h";
 			};
 			name = Release;
 		};
